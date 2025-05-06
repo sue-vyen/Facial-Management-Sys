@@ -2,10 +2,14 @@
 A management system that includes both the admin and users interface
 
 **IMPORTANT!!**
+
+
 After downloading the files, see that they are in the right folders according to the code
 OR
 change the part of the code where it takes the resources files (images, .fxml, fonts) respectively
 _Happy Using!_
+
+
 
 Connecting the database to the folder:
 To check whether the database is connected, run DBTest.
@@ -23,5 +27,8 @@ Switching from Customer Mode to Admin Mode:
 OR you can register as well
 
 ADMIN MODE
+
+
 Moving Appointment card: Drag and Drop
+
 Calendar View: Click on the day to view the full details
