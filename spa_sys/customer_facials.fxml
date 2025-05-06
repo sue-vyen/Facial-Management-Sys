@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.spa_sys.controllers.CustomerFacialsController"
+            stylesheets="@CustomerFacials.css" styleClass="background-colour">
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="background-colour">
+            <VBox fx:id="facialsContainer" spacing="10" fillWidth="true" alignment="CENTER" styleClass="background-colour">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,143 @@
+/* GLOBAL ROOT STYLE */
+.root {
+    -fx-font-family: "Playfair Display";
+    -fx-background-color: transparent;
+}
+
+.stack-background {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #DCE7F7 0%,
+            #A7BFE8 40%,
+            #7096D1 100%
+    );
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+
+/* HEADER / SPA NAME */
+/*GREETING*/
+.greeting-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #444;
+}
+
+.greeting-label2 {
+    -fx-font-size: 40px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #444;
+}
+
+.greeting-role {
+    -fx-font-size: 20px;
+    -fx-font-style: italic;
+    -fx-underline: true;
+    -fx-text-fill: #444;
+}
+
+/* SPA NAME */
+.spa-name-oval {
+    -fx-background-color: #BAD6EB;
+    -fx-background-radius: 100;
+    -fx-padding: 30;
+}
+
+.spa-name-label {
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-text-fill: #FFF9F0;
+}
+
+/* PROMPT FIELDS */
+.input-field {
+    -fx-font-size: 14px;
+    -fx-alignment: center;
+    -fx-prompt-text-fill: derive(#98A7B8, -30%);
+    -fx-background-radius: 10;
+}
+
+/* CTA BUTTON */
+.login-button {
+    -fx-background-color: linear-gradient(
+            to right,
+            #f8c94b 0%,
+            #d1be70 100%
+    );
+    -fx-text-fill: #F7F2EB;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 24;
+    -fx-background-radius: 20;
+    -fx-transition: background-color 0.2s;
+}
+
+.register-button {
+    -fx-background-color: linear-gradient(
+            to right,
+            #A7BFE8 0%,
+            #7096D1 100%
+    );
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 24;
+    -fx-background-radius: 20;
+    -fx-transition: background-color 0.2s;
+}
+
+/* SUCCESS / ERROR */
+.success-text {
+    -fx-text-fill: darkseagreen;
+}
+
+.error-text {
+    -fx-text-fill: red;
+}
+
+/* White card background (extra layer) */
+.white-card-bg {
+    -fx-background-color: white;
+    -fx-background-radius: 40;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 20, 0, 0, 10);
+}
+
+/* Main content card */
+.card-container {
+    -fx-background-color: rgba(255,255,255,0.9); /* Let white card handle bg */
+    -fx-padding: 40;
+}
+
+
+
+/*LOGOUT SCREEN*/
+/* Logout Screen Styles */
+.logout-screen {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #a3d3f3 0%,
+            #f8c94b 45%,
+            #2b5fa1 100%
+    );
+    -fx-transition: background-color 0.2s;
+}
+
+.logout-message {
+    -fx-font-size: 60px;
+    -fx-text-fill: #FFF9F0;
+    -fx-font-family: "Playfair Display";
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.logout-message2 {
+    -fx-font-size: 30px;
+    -fx-text-fill: #FFF9F0;
+    -fx-font-family: "Playfair Display";
+    -fx-font-style: italic;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}

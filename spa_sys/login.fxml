@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<StackPane fx:controller="com.example.spa_sys.controllers.LoginController"
+           xmlns:fx="http://javafx.com/fxml"
+           stylesheets="@style.css"
+           prefWidth="1000" prefHeight="700"
+           styleClass="stack-background">
+
+    <!-- Outer Container for layering background and card -->
+    <StackPane alignment="CENTER">
+
+        <!-- White Card Background Layer -->
+        <VBox styleClass="white-card-bg" maxWidth="700" maxHeight="550" />
+
+        <!-- Main Card Content -->
+        <VBox alignment="CENTER" spacing="20"
+              styleClass="card-container"
+              maxWidth="600" maxHeight="500">
+
+            <!-- Greeting -->
+            <VBox spacing="5" alignment="CENTER">
+                <TextFlow fx:id="greetingFlow" textAlignment="CENTER">
+                    <Text fx:id="greetingPrefix" text="Dear " styleClass="greeting-label" />
+                    <Text fx:id="greetingRole" text="Customer" styleClass="greeting-role" />
+                    <Text text="," styleClass="greeting-label" />
+                </TextFlow>
+
+                <Label fx:id="greetingLabel" text="Welcome To" styleClass="greeting-label2" />
+            </VBox>
+
+            <!-- Oval Spa Name -->
+            <StackPane fx:id="spanameoval" onMouseClicked="#handleFlip" styleClass="spa-name-oval">
+                <Label text="V-Calm" styleClass="spa-name-label" />
+            </StackPane>
+
+            <!-- Username & Password Fields -->
+            <VBox spacing="15" alignment="CENTER">
+                <TextField fx:id="usernameField" promptText="Username" styleClass="input-field" maxWidth="300" />
+                <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field" maxWidth="300" />
+            </VBox>
+
+            <!-- Login Status -->
+            <Label fx:id="loginsuccessful" styleClass="success-text" />
+            <Label fx:id="errorLabel" styleClass="error-text" />
+
+            <!-- Button -->
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Log In" onAction="#handleLogin" styleClass="login-button" />
+                <Button fx:id="registerButton" text="Register" onAction="#handleRegister" styleClass="register-button" />
+            </HBox>
+        </VBox>
+    </StackPane>
+</StackPane>

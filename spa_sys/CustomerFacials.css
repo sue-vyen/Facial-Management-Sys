@@ -1,0 +1,111 @@
+.background-colour{
+    -fx-background-color: #DCE7F7;
+}
+
+.facial-card {
+    -fx-background-color: white;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 6, 0, 0, 2);
+    -fx-spacing: 20;
+    -fx-font-family: "Playfair Display";
+    -fx-border-color: #A7BFE8;
+}
+
+.facial-card:hover {
+    -fx-effect: dropshadow(gaussian, #a7bfe8bb, 22, 0.15, 0, 6);
+}
+
+.facial-label {
+    -fx-font-family: "Playfair Display";
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 20px;
+}
+
+.vbox {
+    spacing: 10px;
+}
+
+.hbox {
+    spacing: 15px;
+}
+
+.label {
+    font-size: 14px;
+}
+
+.facial-name {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0b2545;
+    -fx-padding: 0 0 3 0;
+}
+
+.description {
+    -fx-font-size: 15px;
+    -fx-wrap-text: true;
+    -fx-max-width: 500px;
+    -fx-text-fill: #34495e;
+}
+
+.number-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+}
+
+.details-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #B09B71;
+}
+
+.details {
+    -fx-font-size: 15px;
+    -fx-font-style: italic;
+    -fx-text-fill: #596780;
+}
+
+.book-button {
+    -fx-font-family: "Playfair Display";
+    -fx-background-color: #0b4e91;
+    -fx-text-fill: #ffffff;
+}
+
+.facial-image {
+    -fx-background-color: #e9f0fb;  /* Light blue frame */
+    -fx-padding: 12;
+    -fx-effect: dropshadow(gaussian, #b1bdd6, 12, 0, 0, 2);
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+}
+.image-box {
+    -fx-alignment: center;
+    -fx-background-radius: 15;
+    -fx-padding: 5 0 5 0;
+    -fx-min-width: 270;
+    -fx-min-height: 270;
+}
+
+
+.popup-title {
+    -fx-font-size: 28px;
+    -fx-font-family: "Playfair Display";
+    -fx-font-weight: bold;
+    -fx-text-fill: #6D8ACD;
+    -fx-padding: 0 0 10 0;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, #B6C9EC55, 6, 0, 2, 3);
+}
+
+.popup-content {
+    -fx-background-color: #f6fafd;  /* Soft blue-white */
+    -fx-border-radius: 24;
+    -fx-padding: 36 32 36 32;
+    -fx-spacing: 18;
+    -fx-font-family: "Playfair Display";
+    -fx-effect: dropshadow(gaussian, #A7BFE8AA, 28, 0.13, 0, 3);
+}
+

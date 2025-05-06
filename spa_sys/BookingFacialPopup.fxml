@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.sun.javafx.webkit.theme.RenderThemeImpl.FormRadioButton?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.spa_sys.controllers.BookingFacialPopupController"
+      stylesheets="@CustomerFacials.css"
+      styleClass="popup-content"
+      prefWidth="450" prefHeight="600" alignment="CENTER">
+
+    <!-- Title -->
+    <Label text="Book Your Facial"
+           styleClass="popup-title"/>
+
+    <!-- Facial name -->
+    <Label fx:id="facialNameLabel"
+           text="(facial name)"
+           style="-fx-font-size:18px; -fx-font-weight:bold;"
+    />
+
+    <!-- Date -->
+    <DatePicker fx:id="bookingDatePicker"/>
+
+    <!-- Time -->
+    <ComboBox fx:id="timeComboBox"
+            promptText="Appointment Time" />
+
+    <!-- Facialist -->
+<!--    <ComboBox fx:id="facialistComboBox"-->
+<!--              promptText="Select Facialist"/>-->
+
+    <VBox fx:id="facialistRadioBox" spacing="5" alignment="CENTER"/>
+
+    <!-- Payment -->
+    <ComboBox fx:id="paymentMethodComboBox"
+              promptText="Select Payment Method"/>
+
+    <!-- Terms & Conditions -->
+    <CheckBox fx:id="termsCheckBox"
+              text="I accept the Terms &amp; Conditions"/>
+
+    <!-- Buttons -->
+    <Button fx:id="bookButton"
+            text="Book Facial"
+            onAction="#onBookFacial"/>
+
+    <Button fx:id="cancelButton"
+            text="Cancel"
+            onAction="#handleCancel"/>
+
+</VBox>
+

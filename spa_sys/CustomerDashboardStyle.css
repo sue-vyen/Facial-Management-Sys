@@ -1,0 +1,41 @@
+.top-container {
+    -fx-padding: 15;
+    -fx-background-color: #DCE7F7;
+}
+
+.spa-name-title {
+    -fx-font-size: 32px;
+    -fx-font-family: "Playfair Display";
+    -fx-text-fill: #375D8C;
+    -fx-font-style: italic;
+    -fx-background-color: #F6FAFD;
+}
+
+.navigation-bar {
+    -fx-padding: 10 20;
+    -fx-background-color: #F6FAFD;
+    -fx-border-color: #DCE7F7;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.navigation-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #232D3F;
+    -fx-font-size: 14px;
+    -fx-padding: 8 15;
+    -fx-border-radius: 20;
+    -fx-cursor: hand;
+}
+
+.navigation-button:hover, .logout-button:hover{
+    -fx-background-color: #e9ecef;
+    -fx-text-fill: #375D8C;
+}
+
+.logout-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #232D3F;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+

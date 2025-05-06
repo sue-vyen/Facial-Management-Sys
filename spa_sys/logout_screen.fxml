@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           stylesheets="@style.css"
+           styleClass="logout-screen"
+           alignment="CENTER">
+
+    <VBox alignment="CENTER" spacing="12">
+        <Label text="See You Next Time!" styleClass="logout-message" />
+        <Label text="Love, V-Calm" styleClass="logout-message2" />
+    </VBox>
+
+</StackPane>

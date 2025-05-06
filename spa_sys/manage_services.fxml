@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.spa_sys.controllers.ServicesController"
+            stylesheets="@ManageServicestyle.css">
+
+    <center>
+        <ScrollPane fitToWidth="true">
+            <VBox fx:id="servicesContainer" spacing="10" fillWidth="true">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+
+                <!--        Adding another service but make it look like it is one of the cards        -->
+                <Button fx:id="addServiceButton" text="+ Add New Service" onAction="#onAddService" styleClass="add-card-button" />
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.spa_sys.controllers.ServiceCardController"
+      styleClass="service-card"
+      spacing="20"
+      alignment="CENTER">
+
+    <!-- IMAGE + Change Button -->
+    <VBox spacing="10" styleClass="image-box">
+        <ImageView fx:id="serviceImage"
+                   fitWidth="150" fitHeight="150"
+                   preserveRatio="true"
+                   styleClass="service-image" />
+        <Button fx:id="changeImageButton" text="Change Image" styleClass="image-button" onAction="#onChangeImage"/>
+    </VBox>
+
+    <!-- FORM GRID -->
+    <GridPane hgap="10" vgap="10" styleClass="service-form">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="20"/>
+            <ColumnConstraints percentWidth="80"/>
+        </columnConstraints>
+
+        <!-- Row 0: Name -->
+        <Label text="Facial Name:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="nameField" styleClass="form-field" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Row 1: Description -->
+        <Label text="Description:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextArea fx:id="descriptionArea"
+                  wrapText="true"
+                  prefRowCount="2"
+                  styleClass="form-field"
+                  GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Row 2: Price & Duration -->
+        <Label text="Price:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <HBox spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="1">
+            <TextField fx:id="priceField" styleClass="small-field"/>
+            <Label text="Duration:" styleClass="form-label"/>
+            <TextField fx:id="durationField" styleClass="small-field"/>
+        </HBox>
+
+        <!-- Row 3: Ingredients -->
+        <Label text="Key Ingredients:" styleClass="form-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextArea fx:id="ingredientsArea"
+                  wrapText="true"
+                  prefRowCount="1"
+                  styleClass="form-field"
+                  GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Row 4: Benefits -->
+        <Label text="Benefits:" styleClass="form-label" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextArea fx:id="benefitsArea"
+                  wrapText="true"
+                  prefRowCount="1"
+                  styleClass="form-field"
+                  GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <!-- Row 5: Actions -->
+        <HBox spacing="15" alignment="CENTER_RIGHT"
+              GridPane.rowIndex="5" GridPane.columnIndex="1">
+            <Button fx:id="deleteButton" text="Delete" styleClass="cancel-button" onAction="#onDelete" />
+            <Button fx:id="updateButton" text="Save Changes" styleClass="submit-button" onAction="#onUpdate"/>
+        </HBox>
+    </GridPane>
+</HBox>

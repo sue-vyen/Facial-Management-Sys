@@ -1,0 +1,77 @@
+/* Add a background to the whole page */
+.root, .stack-pane, .background-colour {
+    -fx-background-color: #DCE7F7;
+}
+
+/* Buttons */
+.search-button {
+    -fx-background-color: #C27E35;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 7 22;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-margin-left: 8px;
+}
+
+.kpi-card {
+    -fx-background-color: #F0EEF2;
+    -fx-padding: 30 40 30 40;
+    -fx-background-radius: 15;
+    -fx-min-width: 220;
+    -fx-min-height: 100;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);
+    -fx-spacing: 8;
+}
+
+.kpi-title {
+    -fx-font-size: 16px;
+    -fx-text-fill: #555555;
+}
+
+.kpi-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #98A7B8;
+}
+
+/* Section Titles */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Payment Breakdown Labels */
+.payment-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+}
+
+/* Table Styling */
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #98A7B8;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #98A7B8;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: #2c3e50;
+}
+
+.table-row-cell:filled:hover {
+    -fx-background-color: #F6FAFD;
+}
+

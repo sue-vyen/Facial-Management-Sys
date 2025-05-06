@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.spa_sys.controllers.MainPageController"
+            prefHeight="700" prefWidth="1000"
+            stylesheets="@MainPageStyle.css"
+            fx:id="splashOverlay" styleClass="splash-overlay">
+
+    <VBox alignment="CENTER" spacing="24">
+        <Label fx:id="whenCalmLabel" text="When You Are Calm," styleClass="calm-phrase"/>
+        <Label fx:id="vCalmLabel" text="V-Calm" styleClass="v-calm-phrase"/>
+    </VBox>
+
+</StackPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="800"
+            prefWidth="1200"
+            stylesheets="@adminstyle.css"
+            xmlns="http://javafx.com/javafx/17.0.6"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.spa_sys.controllers.AdminDashboardController">
+
+<!--  Profile and Logout  -->
+    <top>
+<!--        The top banner for the Spa's Name -->
+        <VBox prefHeight="166.0" prefWidth="1200.0" spacing="10" styleClass="top-container">
+            <Label alignment="CENTER" maxWidth="Infinity" prefHeight="84.0" prefWidth="1170.0" styleClass="spa-name-title" text="V-Calm" HBox.hgrow="ALWAYS" />
+
+<!--        Navigation Menu -->
+         <HBox alignment="CENTER" prefHeight="34.0" prefWidth="1170.0" spacing="20" styleClass="navigation-bar">
+
+<!--            Main Admin Dashboard Functions on the left-->
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <Button onAction="#showMainPage" styleClass="navigation-button" text="Home" />
+                <Button onAction="#showAppointments" styleClass="navigation-button" text="Appointment Calender" />
+                <Button onAction="#showManageAppointments" styleClass="navigation-button" text="Manage Appointments" />
+                <Button onAction="#showManageServices" styleClass="navigation-button" text="Manage Services" />
+                <Button onAction="#showSalesReport" styleClass="navigation-button" text="Sales Report" />
+                <Button onAction="#showStaffInfo" styleClass="navigation-button" text="Staff Info" />
+            </HBox>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+<!--            Profile + Logout Functions on the right-->
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+                <Button onAction="#handleLogout" styleClass="logout-button" text="Logout" />
+            </HBox>
+        </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <StackPane fx:id="contentArea" />
+<!--        load the FXML for each section here-->
+    </center>
+</BorderPane>

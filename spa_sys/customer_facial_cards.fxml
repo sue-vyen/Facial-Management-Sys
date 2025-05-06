@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.spa_sys.controllers.CustomerFacialCardController"
+      styleClass="facial-card"
+      stylesheets="@CustomerFacials.css"
+      spacing="20"
+      alignment="CENTER"
+        maxWidth="1000">
+
+    <!-- IMAGE + Change Button -->
+    <VBox spacing="10" styleClass="image-box" alignment="CENTER">
+        <ImageView fx:id="serviceImage"
+                   fitWidth="250" fitHeight="250"
+                   preserveRatio="true"
+                   styleClass="facial-image" />
+    </VBox>
+
+    <!-- INFO GRID (without input fields) -->
+    <GridPane hgap="10" vgap="10" styleClass="service-form" alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="20"/>
+            <ColumnConstraints percentWidth="80"/>
+        </columnConstraints>
+
+        <!-- Row 0: Name -->
+        <Label fx:id="serviceNameLabel" styleClass="facial-name" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Row 1: Description -->
+        <Label fx:id="descriptionLabel" wrapText="true" styleClass="description" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Row 2: Price & Duration -->
+        <Label text="Price:" styleClass="number-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="priceLabel" styleClass="number-label" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label text="Duration:" styleClass="number-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="durationLabel" styleClass="number-label" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Row 3: Ingredients -->
+        <Label text="Key Ingredients:" styleClass="details-label" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Label fx:id="ingredientsLabel" styleClass="details" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <!-- Row 4: Benefits -->
+        <Label text="Benefits:" styleClass="details-label" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <Label fx:id="benefitsLabel" styleClass="details" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <!-- Row 5: Booking -->
+        <HBox spacing="15" alignment="CENTER_RIGHT"
+              GridPane.rowIndex="6" GridPane.columnIndex="1">
+            <Button fx:id="bookButton" text="Book This" styleClass="book-button" onAction="#onBookButton"/>
+        </HBox>
+    </GridPane>
+</HBox>

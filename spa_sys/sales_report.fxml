@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.ObservableList?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<?import javafx.geometry.Insets?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.spa_sys.controllers.SalesController"
+            stylesheets="@SalesStyle.css"
+            alignment="CENTER" styleClass="stack-pane">
+
+    <StackPane styleClass="stack-pane">
+        <VBox spacing="20" maxWidth="1500">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20" />
+            </padding>
+
+            <!-- Filters Section -->
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Start Date:"/>
+                <DatePicker fx:id="startDatePicker"/>
+                <Label text="End Date:"/>
+                <DatePicker fx:id="endDatePicker"/>
+                <Button fx:id="searchButton" text="Search" styleClass="search-button"/>
+                <ComboBox fx:id="staffComboBox" promptText="Select Staff" />
+                <ComboBox fx:id="serviceComboBox" promptText="Select Service" />
+                <ComboBox fx:id="paymentMethodComboBox" promptText="Select Payment Method" />
+            </HBox>
+
+            <!-- KPIs Section -->
+            <HBox spacing="30" alignment="CENTER">
+                <VBox styleClass="kpi-card">
+                    <Label text="Total Revenue" styleClass="kpi-title"/>
+                    <Label fx:id="totalRevenueLabel" styleClass="kpi-value"/>
+                </VBox>
+                <VBox styleClass="kpi-card" alignment="CENTER">
+                    <Label text="Completed Appointments" styleClass="kpi-title"/>
+                    <Label fx:id="completedAppointmentsLabel" styleClass="kpi-value"/>
+                </VBox>
+            </HBox>
+
+            <!-- Table Section -->
+            <TableView fx:id="salesTable" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID"/>
+                    <TableColumn fx:id="customerColumn" text="Customer"/>
+                    <TableColumn fx:id="staffColumn" text="Staff"/>
+                    <TableColumn fx:id="serviceColumn" text="Service" />
+                    <TableColumn fx:id="dateColumn" text="Date"/>
+                    <TableColumn fx:id="paymentMethodColumn" text="Payment Method"/>
+                    <TableColumn fx:id="totalColumn" text="Total Amount"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </StackPane>
+</StackPane>
+

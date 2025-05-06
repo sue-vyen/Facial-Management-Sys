@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.spa_sys.controllers.CustomerDashboardController"
+            stylesheets="@CustomerDashboardStyle.css"
+            prefHeight="800" prefWidth="1200">
+
+    <top>
+        <!--        The top banner for the Spa's Name -->
+        <VBox prefHeight="166.0" prefWidth="1200.0" spacing="10" styleClass="top-container">
+            <Label alignment="CENTER" maxWidth="Infinity" prefHeight="84.0" prefWidth="1170.0" styleClass="spa-name-title" text="V-Calm" HBox.hgrow="ALWAYS" />
+
+            <!-- Navigation Menu -->
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="1170.0" spacing="20" styleClass="navigation-bar">
+
+                <HBox alignment="CENTER_LEFT" spacing="15">
+                    <Button text="Home" fx:id="homeButton" onAction="#showHomePage" styleClass="navigation-button"/>
+                    <Button text="Facials" fx:id="facialsButton" onAction="#showFacialsPage" styleClass="navigation-button"/>
+                    <Button text="Bookings" fx:id="bookingsButton" onAction="#showBookingsPage" styleClass="navigation-button"/>
+                </HBox>
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button text="Logout" fx:id="logoutButton" onAction="#showLogoutPage" styleClass="logout-button"/>
+                </HBox>
+
+            </HBox>
+        </VBox>
+    </top>
+
+        <!-- Main Content Area -->
+        <center>
+            <StackPane fx:id="contentArea" />
+        </center>
+</BorderPane>

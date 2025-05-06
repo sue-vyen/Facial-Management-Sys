@@ -1,0 +1,27 @@
+.splash-overlay {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #F7FAFC 0%,     /* Off-White */
+            #DCE7F7 45%,    /* Powder Blue */
+            #466A97 100%    /* Royal Blue */
+    );
+}
+
+.calm-phrase {
+    -fx-font-size: 68px;
+    -fx-text-fill: #375D8C;
+    -fx-font-family: 'Playfair Display', serif;
+    -fx-alignment: center;
+    -fx-letter-spacing: 2.5px;
+}
+
+.v-calm-phrase {
+    -fx-font-size: 88px;
+    -fx-text-fill: #D4AF37;
+    -fx-font-family: 'Playfair Display', serif;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-letter-spacing: 7px;
+    -fx-effect: dropshadow(gaussian, #375D8CBB, 8, 0, 2, 2);
+}

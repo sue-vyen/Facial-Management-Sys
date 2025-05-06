@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.spa_sys.controllers.CalendarAppointmentPopupController"
+            prefHeight="400.0" prefWidth="950.0"
+            stylesheets="@CalendarStyle.css">
+
+    <Label text="Book Appointment Form" />
+
+    <HBox spacing="10">
+        <ComboBox fx:id="customerCombo" promptText="Customer Name"/>
+        <ComboBox fx:id="serviceCombo" promptText="Select Service"/>
+        <ComboBox fx:id="staffCombo" promptText="Select Staff"/>
+        <ComboBox fx:id="paymentMethodCombo" promptText="Payment Method"/>
+    </HBox>
+    <HBox spacing="10">
+        <DatePicker fx:id="datePicker"/>
+        <ComboBox fx:id="timeCombo" promptText="Select Time"/>
+    </HBox>
+    <TextArea fx:id="remarksArea" promptText="Remarks"/>
+    <Button text="Book Appointment"  fx:id="bookButton" onAction="#handleCreateAppointment" styleClass="submit-button" disable="true"/>
+</VBox>

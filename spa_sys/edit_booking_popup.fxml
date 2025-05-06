@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.spa_sys.controllers.EditBookingPopupController"
+            prefWidth="400" prefHeight="350"
+            stylesheets="@CustomerBookings.css">
+
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="30" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30" styleClass="popup-content">
+        <Label text="Edit Appointment" styleClass="popup-title"/>
+
+        <DatePicker fx:id="newDatePicker" promptText="Select new date"/>
+        <ComboBox fx:id="newTimeComboBox" promptText="Select new time"/>
+
+        <CheckBox fx:id="termsCheckBox" text="I accept the new Terms &amp; Conditions"/>
+
+        <HBox spacing="20" alignment="CENTER">
+            <Button fx:id="saveButton" text="Save" onAction="#handleSave" styleClass="book-button"/>
+            <Button fx:id="cancelButton" text="Cancel" onAction="#handleCancel" styleClass="cancel-button"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

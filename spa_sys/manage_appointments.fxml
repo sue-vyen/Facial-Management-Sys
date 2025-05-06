@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.spa_sys.controllers.ManageAppointmentsController"
+            stylesheets="@ManageAppointmentstyle.css">
+
+    <!--  Spa banner + navigation banner  -->
+    <top>
+        <VBox>
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10;">
+                <Label text="Manage Appointments" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+                <DatePicker fx:id="datePicker" />
+                <Button fx:id="showAllAppointmentsButton" text="Show All" onAction="#onShowAll" styleClass="navigation-button" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <!--    Divide the screen for the status board (L) and the modification (R)    -->
+        <SplitPane dividerPositions="0.7">
+
+            <!--      Left side Status Board      -->
+            <ScrollPane fitToHeight="true" fitToWidth="true">
+                <HBox fx:id="statusBoard" spacing="20" style="-fx-padding: 20;" />
+            </ScrollPane>
+
+            <!-- Right side Modification -->
+            <VBox fx:id="editorPane" spacing="10" styleClass="editorpane">
+                <Label text="Edit Appointment" styleClass="edit_appt" />
+                <!-- Updated fx:id to match controller -->
+                <TextField fx:id="editCustomer" promptText="Customer Name"/>
+                <ComboBox fx:id="editService" promptText="Service" />
+                <ComboBox fx:id="paymentMethodCombo" promptText="Payment Method"/>
+
+                <!-- Updated fx:id to match controller -->
+                <ComboBox fx:id="editStaff" promptText="Facialist" />
+                <DatePicker fx:id="editDate" />
+                <ComboBox fx:id="editTime" promptText="Time" />
+                <TextArea fx:id="editRemarks" promptText="Remarks" prefRowCount="3" />
+                <HBox spacing="10">
+                    <!-- Added fx:id for controller wiring -->
+                    <Button fx:id="saveButton" text="Save Changes" styleClass="submit-button" />
+                    <Button fx:id="cancelButton" text="Cancel"  styleClass="cancel-button"/>
+                    <Button fx:id="deleteButton" text="Delete" styleClass="cancel-button" visible="false" onAction="#onDeleteAppointment" />
+                </HBox>
+            </VBox>
+        </SplitPane>
+    </center>
+</BorderPane>

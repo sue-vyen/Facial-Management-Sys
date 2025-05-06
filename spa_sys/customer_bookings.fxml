@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fitToWidth="true"
+            fx:controller="com.example.spa_sys.controllers.CustomerBookingsController"
+            stylesheets="@CustomerBookings.css" styleClass="background-colour">
+
+    <VBox fx:id="appointmentsContainer"
+          alignment="CENTER"
+          spacing="20">
+          <padding>
+              <Insets top="20" right="20" bottom="20" left="20" />
+          </padding>
+    </VBox>
+</ScrollPane>

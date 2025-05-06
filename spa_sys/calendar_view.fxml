@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.spa_sys.controllers.CalendarViewController"
+      spacing="20"
+      stylesheets="@CalendarStyle.css" alignment="CENTER" styleClass="vboxbg">
+
+    <!-- Month Navigation -->
+    <HBox alignment="CENTER" spacing="20">
+        <Button text="←" styleClass="navigation-button" onAction="#previousMonth" />
+        <Label styleClass="month-label" fx:id="monthLabel"/>
+        <Button text="→" styleClass="navigation-button" onAction="#nextMonth" />
+    </HBox>
+
+    <!--  Calendar Grid  -->
+    <GridPane styleClass="calendar-grid" fx:id="calendarGrid"/>
+    <Button text="Book New Appointment" onAction="#openBookAppointmentPopup" styleClass="bookapptbtn" alignment="CENTER"/>
+
+    <!--  Selected Day Details  -->
+    <VBox styleClass="details-container" fx:id="detailsContainer" visible="false" alignment="CENTER">
+        <Label text="Appointments for the Day:" styleClass="details-title" />
+        <ListView styleClass="appointments-list" fx:id="appointmentsList" />
+    </VBox>
+
+</VBox>

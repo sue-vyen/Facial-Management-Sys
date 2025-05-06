@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.spa_sys.controllers.RegistrationController"
+            prefHeight="700" prefWidth="1000"
+            stylesheets="@style.css"
+            styleClass="stack-background">
+
+    <StackPane alignment="CENTER">
+
+        <VBox styleClass="white-card-bg" maxWidth="700" maxHeight="550" />
+
+        <VBox spacing="15"
+              alignment="CENTER"
+              styleClass="card-container"
+              maxWidth="600" maxHeight="500">
+
+            <Label text="Create New Account" styleClass="greeting-label"/>
+            <TextField fx:id="newUsernameField" promptText="Username"/>
+            <PasswordField fx:id="newPasswordField" promptText="Password"/>
+            <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" />
+            <TextField fx:id="emailField" promptText="Email"/>
+            <TextField fx:id="phoneField" promptText="Phone Number"/>
+            <Button fx:id="registerNewUserButton" text="Register" styleClass="login-button"/>
+            <Button fx:id="backToLoginButton" text="Back to Login" styleClass="register-button" onAction="#goToLogin"/>
+
+        </VBox>
+    </StackPane>
+
+</StackPane>

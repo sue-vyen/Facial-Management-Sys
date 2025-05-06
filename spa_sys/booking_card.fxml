@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<HBox fx:id="cardRoot"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.spa_sys.controllers.CustomerBookingCardController"
+      styleClass="booking-card"
+      spacing="28"
+      alignment="CENTER"
+      maxWidth="700">
+
+    <VBox spacing="8" alignment="TOP_LEFT" styleClass="booking-info">
+        <Label fx:id="serviceNameLabel" styleClass="service-name"/>
+        <Label fx:id="appointmentDateLabel" styleClass="appointment-date"/>
+        <Label fx:id="staffNameLabel" styleClass="staff-name"/>
+        <Label fx:id="paymentMethodLabel" styleClass="payment-method"/>
+        <Label fx:id="remarksLabel" styleClass="remarks"/>
+    </VBox>
+    <VBox spacing="10" alignment="TOP_RIGHT" styleClass="booking-actions">
+        <Label fx:id="statusLabel" styleClass="status-label"/>
+        <Button fx:id="editButton" text="Edit" styleClass="edit-button"/>
+    </VBox>
+</HBox>

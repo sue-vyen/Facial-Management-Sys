@@ -1,0 +1,18 @@
+
+.add-card-button {
+    -fx-background-color: #0b4e91;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-pref-width: 1500;
+    -fx-font-family: "Playfair Display";
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.1), 4, 0, 0, 2);
+}
+
+.staff-card-root {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.1), 4, 0, 0, 2);
+    -fx-font-family: "Playfair Display";
+}

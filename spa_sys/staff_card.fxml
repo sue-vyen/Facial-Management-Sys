@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.spa_sys.controllers.StaffCardController"
+            prefHeight="180"
+            maxWidth="Infinity"
+            styleClass="staff-card-root">
+
+    <VBox spacing="8" AnchorPane.topAnchor="8"
+          AnchorPane.leftAnchor="8"
+          AnchorPane.rightAnchor="8"
+          AnchorPane.bottomAnchor="8">
+
+        <HBox spacing="10">
+            <Label text="Name:"/>
+            <TextField fx:id="nameField" HBox.hgrow="ALWAYS"/>
+            <Label text="Phone:"/>
+            <TextField fx:id="phoneField" prefWidth="120"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Email:"/>
+            <TextField fx:id="emailField" HBox.hgrow="ALWAYS"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Gender:"/>
+            <ComboBox fx:id="genderBox"/>
+            <Label text="Status:"/>
+            <ComboBox fx:id="statusBox"/>
+            <Label text="Colour Code:"/>
+            <ColorPicker fx:id="colourPicker"/>
+        </HBox>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button fx:id="saveButton" text="Save" onAction="#onSave"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#onDelete"/>
+        </HBox>
+    </VBox>
+</AnchorPane>
+
